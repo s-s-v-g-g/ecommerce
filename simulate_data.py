@@ -24,6 +24,12 @@ def users(role):
 def products(cargo_id):
     prod_name=product.prod_name()
     price=product.price()
+    status=product.status()
+    describe=product.describe(prod_name,price,status)
+    created_by=product.created_by(cargo_id)
+    return {'product_name':prod_name,'price':price,'describe':describe,'status':status,'created_by':created_by}
+
+
     
 
 

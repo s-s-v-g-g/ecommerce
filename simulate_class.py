@@ -28,7 +28,7 @@ class products(BaseProvider):
         return self.random_element(cargo_id)
     
     def describe(self,prod_name_: str ,price_: float,status_: str) -> str:
-        desc=' '.join(['this is',prod_name_,',it\'s',price_,'yuan per 500g',',it\'s',status_])
+        desc=' '.join(['this is',prod_name_,',it\'s',str(price_),'yuan per 500g',',it\'s',status_])
         return desc
     
 product=Faker()
